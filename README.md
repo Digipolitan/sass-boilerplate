@@ -1,7 +1,7 @@
-Saint-Gobain Front-end
+Sass boilerplate
 ======================================
 
-Front-end integration for Saint-Gobain and BETC
+Simple web project architecture using sass
 
 ## Requirements
 * npm (node package manager)
@@ -10,17 +10,10 @@ Front-end integration for Saint-Gobain and BETC
 * Compass
 
 
-## Specification
-4 html templates will be delivered.  
-Assets need to be separated (sprites, js and css files).  
-Breakpoints :
-- tablet portrait -> 768px
-- mobile -> 600px
-- smaller devices -> 480px - 320px
-
 ## Installation
 
 1. Install npm dependencies  
+
   ```
   npm install
   ```
@@ -29,13 +22,3 @@ Breakpoints :
   ```
   grunt default
   ```
-  
-## Warnings
-
-We use a custom template for sprite SCSS generation, that you can find under 
-```
-sprity-scss/template.hbs
-````
-
-### Contact
-camy.adrien@digipolitan.com
