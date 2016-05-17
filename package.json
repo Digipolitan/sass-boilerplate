@@ -1,7 +1,7 @@
 {
   "name": "sass-boilerplate",
   "version": "1.0.0",
-  "description": "SASS boilerplate basic structre",
+  "description": "SASS boilerplate basic structure",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
