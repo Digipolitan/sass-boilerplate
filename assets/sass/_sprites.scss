@@ -1,0 +1,40 @@
+$sg-logo-light: -0px -0px 40px 17px;
+$brand-sg-logo-light: -0px -17px 40px 17px;
+$timeline-sg-logo-light: -40px -0px 40px 17px;
+$timeline-timeline-less: -0px -34px 25px 25px;
+$timeline-timeline-modal-close: -49px -34px 23px 23px;
+$timeline-timeline-more-desktop: -80px -23px 13px 13px;
+$timeline-timeline-more: -25px -34px 25px 25px;
+$timeline-timeline-puce: -80px -0px 23px 23px;
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 3);
+}
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 4);
+}
+@function sprite-width($sprite) {
+   @return nth($sprite, 3);
+}
+@function sprite-height($sprite) {
+   @return nth($sprite, 4);
+}
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 1);
+  $sprite-offset-y: nth($sprite, 2);
+  background-position: $sprite-offset-x $sprite-offset-y;
+}
+@mixin sprite($sprite, $display: block) {
+   @include sprite-position($sprite);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: $display;
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+@mixin icon() {
+  background-image: url('../images/sprites.png');
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('../images/sprites@2x.png');
+    background-size: 103px 59px;
+  }
+}

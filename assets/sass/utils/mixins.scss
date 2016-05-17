@@ -1,0 +1,57 @@
+@mixin inner-shadow ($x: 0, $y: 1px, $blur: 2px, $spread: 0, $alpha: 0.25) {
+	-webkit-box-shadow: inset $x $y $blur $spread rgba(0, 0, 0, $alpha);
+	-moz-box-shadow:    inset $x $y $blur $spread rgba(0, 0, 0, $alpha);
+	box-shadow:         inset $x $y $blur $spread rgba(0, 0, 0, $alpha);
+}
+
+@mixin custom-flexbox(){
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flex-align( $align : center ) {
+	-ms-flex-align : $align;
+	-webkit-align-items: $align;
+	align-items: $align;
+}
+
+@mixin flex-direction( $direction : row ) {
+	flex-direction: $direction;
+	-ms-flex-direction : $direction;
+	-webkit-flex-direction: $direction;
+}
+
+@mixin flex-order ( $order ) {
+	-webkit-box-ordinal-group: $order;   /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-ordinal-group: $order;      /* OLD - Firefox 19- */
+	-ms-flex-order: $order;              /* TWEENER - IE 10 */
+	-webkit-order: $order;               /* NEW - Chrome */
+	order: $order;                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	-moz-box-flex: $order;
+}
+
+@mixin flex-justify ( $justify : flex-start ) {
+	-ms-flex-pack : $justify;
+	-webkit-justify-content: $justify;
+	-ms-justify-content  : $justify;
+	justify-content: $justify;
+}
+
+@mixin border-gradient() {
+	width: 0px;
+	border-width: 2px;
+	border-style: solid;
+	-webkit-border-image: 
+	-webkit-gradient(linear, 0 0, 0 100%, from(transparent), to($ocean-bold)) 1 100%;
+	-webkit-border-image: 
+	-webkit-linear-gradient(top, transparent 0%, transparent 1% , $ocean-bold 4%) 1 100%;
+	-moz-border-image:
+	-moz-linear-gradient(top, transparent 0%, transparent 1% , $ocean-bold 4%) 1 100%;  
+	-o-border-image:
+	-o-linear-gradient(top, transparent 0%, transparent 1% , $ocean-bold 4%) 1 100%;
+	border-image:
+	linear-gradient(to bottom, transparent 0%, transparent 1% , $ocean-bold 4%) 1 100%;
+}
